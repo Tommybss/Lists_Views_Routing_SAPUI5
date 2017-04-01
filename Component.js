@@ -134,7 +134,7 @@ sap.ui.core.UIComponent.extend("ui5.Component",
 	});
 	
 // Add a model that references the OData Services from percistance model.
-    var oModel= new sap.ui.model.odata.ODataModel("http://hd2.hana.ucc.uwm.edu:8003/GBI_041/gbi/services/gbi.xsodata");                                                                                                                                                               
+    var oModel= new sap.ui.model.odata.ODataModel("INSERT YOUR WEBSITE HERE");                                                                                                                                                               
     this.setModel(oModel,"gbi");
 
 	return oView;
