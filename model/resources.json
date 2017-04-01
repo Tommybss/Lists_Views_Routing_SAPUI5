@@ -3,28 +3,28 @@
         {
             "title": "SAPUI5 Explored",
             "description": "A site that demonstrates many SAPUI5 controls and provides working examples along with the code used to create them.",
-            "url": "https://sapui5.hana.ondemand.com/sdk/explored.html"
+            "url": "RESOURCE LINK GOES HERE"
             
         },
         {
             "title": "SAPUI5 Demo Kit",
             "description": "A site that includes demos, documentation and much more",
-            "url": "https://sapui5.hana.ondemand.com/sdk/#content/Overview.html"
+            "url": "RESOURCE LINK GOES HERE"
         },
         {
             "title": "SAPUI5 Search",
             "description": "A site that integrated a searching tool for SAPUI5 workflows",
-            "url": "https://sapui5.hana.ondemand.com/sdk/search.html"
+            "url": "RESOURCE LINK GOES HERE"
         },
         {
             "title": "SAPUI5 Version Information",
             "description": "A site that information about the current version of SAP",
-            "url": "https://sapui5.hana.ondemand.com/sdk/versioninfo.html"
+            "url": "RESOURCE LINK GOES HERE"
         },
         {
             "title": "SAPUI5 Security",
             "description": "A site that includes security information and documentation",
-            "url": "https://sapui5.hana.ondemand.com/sdk/#docs/#api/security.html"
+            "url": "RESOURCE LINK GOES HERE"
         }
         
     ]
