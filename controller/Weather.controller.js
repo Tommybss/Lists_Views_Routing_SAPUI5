@@ -4,11 +4,11 @@ sap.ui.controller("ui5.controller.Weather", {
 	    this.router = sap.ui.core.UIComponent.getRouterFor(this);
 	    
 	   	    cModel = new sap.ui.model.json.JSONModel();
-		cModel.loadData("http://api.openweathermap.org/data/2.5/weather",{"q":"Sydney","APPID":" 15b195c24696adc6351bb77d250af110"})
+		cModel.loadData("THIS IS WHERE YOU INSERT WEBSITE",{"q":"Sydney","APPID":" INSERT YOUR API HERE"})
 		this.getView().setModel(cModel, "weather");
 		
 		fModel = new sap.ui.model.json.JSONModel();
-		fModel.loadData("http://api.openweathermap.org/data/2.5/forecast/daily",{"q":"Sydney","units":"metric","cnt":"5","APPID":"15b195c24696adc6351bb77d250af110"});
+		fModel.loadData("THIS IS WHERE YOU INSERT YOUR WEBSITE",{"q":"Sydney","units":"metric","cnt":"5","APPID":"INSERT YOUR API  HERE"});
 		this.getView().setModel(fModel, "forecast");
     },  
 
@@ -20,15 +20,15 @@ sap.ui.controller("ui5.controller.Weather", {
 	
 	actSearch: function(){
 		 var address = this.getView().byId("inpSearch").getValue();  
-        cModel.loadData("http://api.openweathermap.org/data/2.5/weather",{"q": address,"APPID":"15b195c24696adc6351bb77d250af110"});
-        fModel.loadData("http://api.openweathermap.org/data/2.5/forecast/daily",{"q": address ,"units":"metric","cnt":"5","APPID":" YOUR APIID"});
+        cModel.loadData("THIS IS WHERE YOU INSERT YOUR WEBSITE",{"q": address,"APPID":"INSERT YOUR API HERE"});
+        fModel.loadData("THIS IS WHERE YOU INSERT YOUR WEBSITE",{"q": address ,"units":"metric","cnt":"5","APPID":"INSERT YOUR API HERE"});
 	},
 	
 	handleRefreshPressed: function(){
 		 var address = this.getView().byId("inpSearch").getValue();
 		 if(!address) address = cModel.getData().name;
-		 cModel.loadData("http://api.openweathermap.org/data/2.5/weather",{"q": address,"APPID":"15b195c24696adc6351bb77d250af110"});
-         fModel.loadData("http://api.openweathermap.org/data/2.5/forecast/daily",{"q": address ,"units":"metric","cnt":"5","APPID":"15b195c24696adc6351bb77d250af110"});
+		 cModel.loadData("THIS IS WHERE YOU INSERT YOUR WEBSITE",{"q": address,"APPID":"INSERT YOUR API HERE"});
+         fModel.loadData("THIS IS WHERE YOU INSERT YOUR WEBSITE",{"q": address ,"units":"metric","cnt":"5","APPID":"INSERT YOUR API HERE"});
 	},
 	
 	date: function(date){
