@@ -1,0 +1,36 @@
+<mvc:View
+	controllerName="ui5.controller.CustomerList"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<Page
+		showNavButton = "true"
+		navButtonPress = "handleNavButtonPress"
+		title="Start Coding Lists!" >
+	<subHeader>
+	<Bar>
+		<contentLeft>
+			<SearchField search="handleSearch" width="100%">
+			</SearchField>
+		</contentLeft>
+	</Bar>
+    </subHeader>
+	<List 
+		id="ShortCustomerList"
+		headerText="Customers"
+		items="{gbi>/Customers}" >
+		<ObjectListItem
+			type="Active"
+			press="handleListItemPress"
+			title="{gbi>CompanyName}"
+			number="{gbi>ID.CustomerID}">
+			<attributes>
+				<ObjectAttribute text ="{gbi>Address.Address}" />
+				<ObjectAttribute text ="{gbi>Address.City}" />
+			</attributes>
+			<firstStatus>
+				<ObjectStatus text = "{gbi>SalesOrgID}" />
+			</firstStatus>
+		</ObjectListItem>
+	</List>
+	</Page>
+</mvc:View>

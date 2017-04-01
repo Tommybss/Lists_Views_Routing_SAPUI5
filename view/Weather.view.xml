@@ -1,0 +1,110 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m" controllerName="ui5.controller.Weather" xmlns:commons="sap.suite.ui.commons">
+  <Page title="Start Coding Cross-Origin Resource Sharing!" id="idPage"
+              showNavButton="true" navButtonPress="handleNavButtonPress">
+    <content>
+	<VBox class="marginBoxContent">
+	  <items>
+		<ObjectHeader id="details" title="{weather>/name}"
+			number="{ path: 'weather>/main/temp', formatter: '.celsius' }"
+			numberUnit="Celsius"
+			icon="{path: 'weather>/weather/0/icon', formatter: '.icon' }"
+			backgroundDesign="Transparent" intro="Weather Forecast"
+			iconActive="true">
+			  <attributes>
+			    <ObjectAttribute text="{weather>/weather/0/description}" />
+			    <ObjectAttribute
+				text="{path: 'weather>/wind/speed', formatter: '.windSpeed' },
+				{path: 'weather>/wind/deg', formatter: 'windDirection' }" />
+			  </attributes>
+			  <statuses>
+			      <ObjectStatus text="{path: 'weather>/sys/sunrise', formatter: '.sunset'}" >
+			      </ObjectStatus>
+			      <ObjectStatus text="{path: 'weather>/sys/sunset', formatter: '.sunrise' }">
+			      </ObjectStatus>
+			  </statuses>
+		</ObjectHeader>
+        <Table id="idForecastTable" inset="false" 
+                items="{forecast>/list}">
+		  <headerToolbar>
+			<Toolbar>
+  		  	  <Label text="Forecast"></Label>
+  		  	  <ToolbarSpacer></ToolbarSpacer>
+  		  	  <Input id="inpSearch" editable="true" value="" maxLength="80" width="200px"/>
+			<Button id="bntSearch" text="Search" tap="actSearch" />
+			  <ToolbarSpacer></ToolbarSpacer>
+			  <Button icon="sap-icon://refresh" 
+                        press="handleRefreshPressed" />
+			</Toolbar>
+		  </headerToolbar>
+		  <columns>
+		    <Column>
+			<header>
+			  <Text text="Date" />
+			</header>
+		  </Column>
+		  <Column minScreenWidth="Tablet" demandPopin='true'>
+		    <header>
+			<Text text="Wind" />
+		    </header>
+		  </Column>
+		  <Column minScreenWidth="Tablet" demandPopin='true'>
+		    <header>
+			<Text text="Hi" />
+		    </header>
+		  </Column>
+		  <Column minScreenWidth="Tablet" demandPopin='true'>
+		    <header>
+			<Text text="Low" />
+		    </header>
+  		  </Column>
+		  <Column>
+		    <header>
+			<Text text="Forecast" />
+		    </header>
+		  </Column>
+		  <Column>
+		    <header>
+			<Text text="Temperature" />
+		    </header>
+		  </Column>
+		</columns>
+		<items>
+		  <ColumnListItem>
+			<cells>
+			  <ObjectIdentifier 
+                title="{ path: 'forecast>dt', formatter: '.date' }"
+                text="{forecast>weather/0/description}" />
+			  <ObjectIdentifier
+			    title="{path: 'forecast>speed', formatter: '.windSpeed' },
+			    {path: 'forecast>deg', formatter: '.windDirection' }" />
+			  <ObjectNumber
+			    number="{path: 'forecast>temp/max', formatter: '.degrees' }"
+			    unit="Celsius" />
+			  <ObjectNumber
+			    number="{path: 'forecast>temp/min', formatter: '.degrees' }"
+			    unit="Celsius" />
+			  <Image src="{path: 'forecast>weather/0/icon', formatter: '.icon' }" />
+			  <commons:ComparisonChart size="S" scale="C" 
+                class="marginTopLeft">
+            	<commons:data>
+            	  <commons:ComparisonData title="Morning"
+            		value="{forecast>temp/morn}" color="Good" />					  
+            		<commons:ComparisonData title="Noon"
+            	      value="{forecast>temp/day}" color="Good" />
+            	<commons:ComparisonData title="Evening"							  
+            	value="{forecast>temp/eve}" color="Good" />
+            	<commons:ComparisonData title="Night"							  
+            	value="{forecast>temp/night}" color="Good" />
+                </commons:data>
+                </commons:ComparisonChart>
+		  </cells>
+	    </ColumnListItem>
+        </items>
+      </Table>
+
+    </items>
+  </VBox>
+</content>
+</Page>
+</core:View>

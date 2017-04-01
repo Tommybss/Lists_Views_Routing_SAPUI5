@@ -1,0 +1,55 @@
+<mvc:View
+	height="100%"
+	controllerName="ui5.controller.Buttons"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc" >
+	<Page
+		enableScrolling="false"
+		showNavButton = "true"
+		navButtonPress = "handleNavButtonPress"
+		title="Start Coding Buttons!" >
+<customHeader>
+	<Toolbar>
+		<Button type="Back" press="handleNavButtonPress" />
+		<ToolbarSpacer/>
+		<Label text="This is my Toolbar" />
+		<ToolbarSpacer/>
+		<Button icon="sap-icon://edit" press="onPress" />
+		<ToolbarSpacer/>
+		<Button icon="sap-icon://inbox" press="onPress" />
+		<ToolbarSpacer/>
+		<Button icon="sap-icon://account" press="onPress"/>
+		<ToolbarSpacer/>
+	</Toolbar>
+</customHeader>
+
+		<Panel width="80%" class="panelShadow">
+	<headerToolbar>
+		<Toolbar height="3rem">
+			<Text text="Buttons" class="sapMH4FontSize"/>
+			<ToolbarSpacer />
+			<Button icon="sap-icon://settings"  press="onPress"/>
+			<Button id='openMenu' icon="sap-icon://drop-down-list" press="handlePressOpenMenu"/>
+		</Toolbar>
+	</headerToolbar>
+	<content>
+		<Button text="Default" press="onPress" icon="sap-icon://action" iconFirst='true' />
+		<Button type="Accept" text="Accept" press="onPress" />
+		<Button type="Reject" text="Reject" press="onPress" />
+		<Button type="Transparent" text="Submit" press="onPress" />
+		<Button type="Up" text="Up" press="onPress" />
+		<Button type="Unstyled" text="Unstyled" press="onPress" />
+		<Button text="Emphasized" press="onPress" type="Emphasized" class="sapUiHideOnPhone"  />
+		</content>
+</Panel>
+<footer>
+	<Toolbar>
+		<ToolbarSpacer/>
+		<ToggleButton text="Pressed" enabled="true" pressed="true" press="onPress" />
+		<Button type="Emphasized" text="Action Sheet" press="handleOpen" />
+		<Button text="Default" press="onPress" />
+		<Button icon="sap-icon://action" press="onPress" />
+	</Toolbar>
+</footer>
+	</Page>
+</mvc:View>

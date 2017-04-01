@@ -1,0 +1,36 @@
+<mvc:View
+	controllerName="ui5.controller.Lists"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<Page
+		showNavButton = "true"
+		navButtonPress = "handleNavButtonPress"
+		title="Start Coding Lists!" >
+	<subHeader>
+	<Bar>
+		<contentLeft>
+			<SearchField search="handleSearch" width="100%">
+			</SearchField>
+		</contentLeft>
+	</Bar>
+    </subHeader>
+	<List 
+		id="ShortProductList"
+		headerText="Products"
+		items="{gbi>/Products}" >
+		<ObjectListItem
+			type="Active"
+			press="handleListItemPress"
+			title="{gbi>ID}"
+			number="{gbi>Price}"
+			numberUnit = "USD">
+			<attributes>
+				<ObjectAttribute text ="{gbi>ProductName}" />
+			</attributes>
+			<firstStatus>
+				<ObjectStatus text = "{gbi>ProductGroup}" />
+			</firstStatus>
+		</ObjectListItem>
+	</List>
+	</Page>
+</mvc:View>

@@ -1,0 +1,14 @@
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core">
+  <ActionSheet
+	title="Choose An Action"
+	showCancelButton="true"
+	placement="Bottom">
+	<buttons>
+		<Button id='idCases' text="Cases" press="onPress" />
+		<Button id='idExercises' text="Exercises" press="onPress" />
+		<Button id='idBoth' text="Both" press="onPress" />
+	</buttons>
+  </ActionSheet>
+</core:FragmentDefinition>

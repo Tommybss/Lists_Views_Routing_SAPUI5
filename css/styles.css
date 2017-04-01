@@ -1,0 +1,21 @@
+.panelShadow 
+{
+   box-shadow: 10px 10px 5px #888888;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 20px;
+   border: solid 1px;
+}
+
+.myMap 
+{  
+    height: 100%;  
+    width: 100%  
+}
+
+.myMaps 
+{ 
+   height: 500PX;
+   width: 1250px;
+ 
+}

@@ -1,0 +1,24 @@
+<mvc:View 
+    controllerName="ui5.controller.Resources"
+    xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<Page 
+	    title="Resources on the Web"
+	    showNavButton = "true"
+	    navButtonPress="handleNavButtonPress">
+	    
+         <HBox fitContainer="true" justifyContent="Center" alignItems="Center" width="60%" class="gridMarginTop">
+        		<List  headerText="SAPUI5 Resources" items="{resources>/ResourceCollection}">
+        				<ObjectListItem 
+        				    type="Active"
+        				    press="handleListPress"
+        					title  = "{resources>title}">
+        				    <attributes>
+        				        <ObjectAttribute text="{resources>description}" />
+        				    </attributes>    
+        				</ObjectListItem>
+        		</List>
+        </HBox>
+		
+	</Page>
+</mvc:View>

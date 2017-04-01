@@ -1,0 +1,68 @@
+{
+	"ViewsCollection" : [
+		{
+			"icon" : "search",
+			"number" : "1",
+			"title" : "Resources",
+			"info" : "Resources"
+		},
+		{
+        	"icon" : "opportunity",
+        	"number" : "2",
+        	"title" : "Buttons and Toolbars",
+        	"info" : "Buttons"
+        },
+        {
+        	"icon" : "provision",
+        	"number" : "3",
+        	"title" : "Tables",
+        	"info" : "Tables"
+        },
+        {
+            "icon" : "activity-items",
+        	"number" : "4",
+        	"title" : "Lists",
+        	"info" : "Lists"
+        },
+        {
+           "icon" : "locate-me",
+        	"number" : "5",
+        	"title" : "GoogleMap",
+        	"info" : "GoogleMap" 
+        },
+        {
+          "icon" : "weather-proofing",
+        	"number" : "6",
+        	"title" : "Weather",
+        	"info" : "Weather"
+        }
+        
+	                    ],
+	"ExerciseCollection" : [
+	    {
+	        "icon" : "world",
+			"number" : "7",
+			"title" : "Hello World Exercise",
+			"info" : "HelloWorld"
+	    },
+	    {
+        	"icon" : "group",
+        	"number" : "8",
+        	"title" : "Customers",
+        	"info" : "Customers"
+        },
+        {
+        	"icon" : "crm-sales",
+        	"number" : "9",
+        	"title" : "CustomerList",
+        	"info" : "CustomerList"
+        },
+        {
+          "icon" : "org-chart",
+        	"number" : "10",
+        	"title" : "CustomerGoogleMap",
+        	"info" : "CustomerGoogleMap"
+        }
+	    ]
+    
+}

@@ -1,0 +1,83 @@
+<mvc:View
+	controllerName="ui5.controller.Tables"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<Page
+		showNavButton = "true"
+		navButtonPress = "handleNavButtonPress"
+		title="Start Coding Tables!" >
+		<Table id="idProductsTable"
+			inset="false"
+			items="{gbi>/Products}">
+			<headerToolbar>
+	<Toolbar>
+		<Label text="Products"></Label>
+		<ToolbarSpacer></ToolbarSpacer>
+		<Button icon="sap-icon://drop-down-list" press="handleViewSettingsDialogButtonPressed" />
+	</Toolbar>
+</headerToolbar>
+<infoToolbar>
+	<Toolbar
+		id="vsdFilterBar"
+		active="true"
+		visible="false"	press="[handleViewSettingsDialogFilterBarPressed, views.control.tableViewSettingsDialog]">
+		<Label id="vsdFilterLabel" text="?" />
+	</Toolbar>
+</infoToolbar>
+		<columns>
+	<Column
+		minScreenWidth="Tablet"
+		demandPopin='true'
+		mergeDuplicates="true">
+		<header>
+			<Text text="Division" />
+		</header>
+	</Column>
+	<Column
+		minScreenWidth="Tablet">
+		<header>
+			<Text text="Product" />
+		</header>
+	</Column>
+	<Column
+		minScreenWidth="Tablet"
+		demandPopin='true'>
+		<header>
+			<Text text="Product Category" />
+		</header>
+	</Column>
+	<Column
+		minScreenWidth="Tablet"
+		demandPopin='true'>
+		<header>
+			<Text text="Price" />
+		</header>
+	</Column>
+	<Column>
+		<header>
+			<Text text="ProductGroup" />
+		</header>
+	</Column>
+</columns>
+<items>
+	<ColumnListItem>
+		<cells>
+		<Text
+			text="{gbi>Division}" />
+		<ObjectIdentifier
+			title="{gbi>ProductName}"
+			text="{gbi>ID}" />
+		<Text
+			text="{gbi>ProductCategory}" />
+		<ObjectNumber
+		       number="{gbi>Price}"
+		       unit="USD" />
+		<Text
+			text="{gbi>ProductGroup}" />
+	</cells>
+	</ColumnListItem>
+</items>
+		</Table>
+		
+	</Page>
+</mvc:View>

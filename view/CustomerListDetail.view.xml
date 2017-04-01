@@ -1,0 +1,23 @@
+<mvc:View
+	controllerName="ui5.controller.CustomerListDetail"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:commons="sap.suite.ui.commons"
+	xmlns="sap.m">
+	<Page
+		showNavButton = "true"
+		navButtonPress = "handleNavButtonPress"
+		title="Customer List Detail!" >
+		<ObjectHeader
+			title="{gbi>CompanyName}"
+			number="{gbi>ID.CustomerID}">
+			<attributes>
+				<ObjectAttribute text = "{gbi>Address.Address}" />
+				<ObjectAttribute text = "{gbi>Address.City}" />
+				<ObjectAttribute text = "{gbi>Address.Postal_code}" />
+			</attributes>
+			<firstStatus>
+				<ObjectStatus text = "{gbi>SalesOrgID}" />
+			</firstStatus>
+		</ObjectHeader>
+	</Page>
+</mvc:View>

@@ -1,0 +1,24 @@
+<mvc:View
+	controllerName="ui5.controller.ListDetail"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:commons="sap.suite.ui.commons"
+	xmlns="sap.m">
+	<Page
+		showNavButton = "true"
+		navButtonPress = "handleNavButtonPress"
+		title="Product List Detail!" >
+		<ObjectHeader
+			title="{gbi>ProductName}"
+			number = "{gbi>Price}"
+			numberUnit = "USD" >
+			<attributes>
+				<ObjectAttribute text = "{gbi>ProductCategory}" />
+				<ObjectAttribute text = "{gbi>ProductGroup}" />
+				<ObjectAttribute text = "{gbi>Division}" />
+			</attributes>
+			<firstStatus>
+				<ObjectStatus text = "{gbi>InternalPrice}" />
+			</firstStatus>
+		</ObjectHeader>
+	</Page>
+</mvc:View>

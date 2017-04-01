@@ -1,0 +1,12 @@
+<mvc:View 
+height="100%" controllerName="ui5.controller.HelloWorld"  xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:c="sap.suite.ui.commons">
+	<Page enableScrolling="false" title="Hello World!" 
+	    showNavButton = "true"
+	    navButtonPress="handleNavButtonPress">
+            <c:GenericTile 
+                frameType="TwoByOne" 
+                header="Hello World!"
+                backgroundImage="http://mindmajix.com/wp-content/uploads/2014/10/sap-ui5-online-training.png" />
+	</Page>
+</mvc:View>

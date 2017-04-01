@@ -1,0 +1,68 @@
+<mvc:View
+	controllerName="ui5.controller.Customers"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<Page
+		showNavButton = "true"
+		navButtonPress = "handleNavButtonPress"
+		title="Start Coding Tables!" >
+		<Table id="idCustomersTable"
+			inset="false"
+			items="{gbi>/Customers}">
+			<headerToolbar>
+	<Toolbar>
+		<Label text="Customers"></Label>
+		<ToolbarSpacer></ToolbarSpacer>
+		<Button icon="sap-icon://drop-down-list" press="handleViewSettingsDialogButtonPressed" />
+	</Toolbar>
+</headerToolbar>
+<infoToolbar>
+	<Toolbar
+		id="vsdFilterBar"
+		active="true"
+		visible="false"	press="[handleViewSettingsDialogFilterBarPressed, views.control.tableViewSettingsDialog]">
+		<Label id="vsdFilterLabel" text="?" />
+	</Toolbar>
+</infoToolbar>
+		<columns>
+	<Column
+		minScreenWidth="Tablet"
+		demandPopin='true'
+		mergeDuplicates="true">
+		<header>
+			<Text text="Company" />
+		</header>
+	</Column>
+	<Column
+		minScreenWidth="Tablet">
+		<header>
+			<Text text="Sales Org" />
+		</header>
+	</Column>
+	<Column
+		minScreenWidth="Tablet"
+		demandPopin='true'>
+		<header>
+			<Text text="Address" />
+		</header>
+	</Column>
+</columns>
+<items>
+	<ColumnListItem>
+		<cells>
+		<ObjectIdentifier
+			title="{gbi>CompanyName}"
+			text="{gbi>ID.CustomerID}" />
+		<ObjectIdentifier
+			title="{gbi>SalesOrgID}"
+			text="{gbi>ID}" />
+		<ObjectIdentifier
+			title="{gbi>Address.Address}"
+			text="{gbi>Address.City}" />
+	</cells>
+	</ColumnListItem>
+</items>
+		</Table>
+		
+	</Page>
+</mvc:View>

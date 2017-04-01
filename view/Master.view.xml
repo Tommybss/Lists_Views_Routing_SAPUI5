@@ -1,0 +1,28 @@
+<mvc:View height="100%" controllerName="ui5.controller.Master" xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:commons="sap.suite.ui.commons">
+	<Page enableScrolling="false" title="Start Coding!">
+	
+		<customHeader>
+			<Toolbar>
+			    <Button icon="sap-icon://menu" press="handlePressOpen"/>
+			    <Image src="http://go.sap.com/dam/application/shared/logos/sap-logo.png.adapt.72_36.false.png" />
+				<ToolbarSpacer />
+				<Label text="Let's Start Coding!" />
+				<ToolbarSpacer />
+			</Toolbar>
+		</customHeader>
+		
+			<TileContainer id="caseTiles" height="50%" tiles="{views>/ViewsCollection}">
+				<StandardTile press="handleTilePress" icon="sap-icon://{views>icon}"
+					type="{views>type}" number="{views>number}" numberUnit="{views>numberUnit}" title="{views>title}"
+					info="{views>info}" infoState="{views>infoState}" />
+			</TileContainer>
+			
+			<TileContainer id="exerciseTiles" height="50%" tiles="{views>/ExerciseCollection}">
+				<StandardTile press="handleTilePress" icon="sap-icon://{views>icon}"
+					type="{views>type}" number="{views>number}" numberUnit="{views>numberUnit}" title="{views>title}"
+					info="{views>info}" infoState="{views>infoState}" />
+			</TileContainer>
+
+	</Page>
+</mvc:View>
