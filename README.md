@@ -1,11 +1,18 @@
 # Lists_Views_Routing_SAPUI5
 Advanced App: This application takes multiple controllers, views, fragments, API and other objects to create a large SAPUI5 application
 
-Uses Controllers for Buttons, Customer Google Maps, Customer Lists, Customer Lists Details, Customers, Google Maps, Hello World, 
-List Detail, Lists,  Master, Rosources, Tables and Weather 
+Controller - Buttons, Google Maps, Lists, Details, Resources, Tables, and API Weather calls
 
-Uses CSS for styling
+The controller contains multiple .js files that are all linked to a specific view. Most of the code contains comments for references
+or customizations
 
-The Model contains resources and views binded to the SAPUI5 core
+CSS
 
-Views for all the controllers and additional fragments for actions within the appliction
+Only used for fixing fields that may be placed off the screen and making items relative
+
+Model - Resources and Views (JSON)
+The model contains some .json files that are referenced in the projects
+
+Views - Buttons, Google Maps, Lists, Details, Resources, Tables, and API Weather calls
+
+This is how the information is put to the screen
