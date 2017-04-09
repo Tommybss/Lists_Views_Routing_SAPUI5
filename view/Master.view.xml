@@ -5,7 +5,7 @@
 		<customHeader>
 			<Toolbar>
 			    <Button icon="sap-icon://menu" press="handlePressOpen"/>
-			    <Image src="http://go.sap.com/dam/application/shared/logos/sap-logo.png.adapt.72_36.false.png" />
+			    <Image src="IMAGE SOURCE GOES HERE" />
 				<ToolbarSpacer />
 				<Label text="Let's Start Coding!" />
 				<ToolbarSpacer />
